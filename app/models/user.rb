@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
+  #EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
+  EMAIL_REGEXP = /.*/
 
   validates_presence_of :email, :full_name, :location, :password
   validates_confirmation_of :password
@@ -20,6 +21,5 @@ class User < ActiveRecord::Base
   Ainda é possível colocar múltiplos atributos na validação:
   validates :email, :full_name, :location, presence: true
 =end
-
 
 end
