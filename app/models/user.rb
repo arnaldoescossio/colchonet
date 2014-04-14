@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  #EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
-  EMAIL_REGEXP = /.*/
+    EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
+  #EMAIL_REGEXP = /.*/
 
   validates_presence_of :email, :full_name, :location, :password
   validates_confirmation_of :password
